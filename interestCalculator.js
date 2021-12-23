@@ -48,20 +48,20 @@ export default class InterestCalculator {
     return futures;
   }
 
-  // getNominalInterestDecimal() {
-  //   const interest = this.simpleInterestDecimal(
-  //     this.principal,
-  //     this.interestRate
-  //   );
-  //   return this.getCompoundInterest(this.principal, interest, this.times);
-  // }
-  // getNominalInterestPercent() {
-  //   const interest = this.simpleInterestPercent(
-  //     this.principal,
-  //     this.interestRate
-  //   );
-  //   return this.getCompoundInterest(this.principal, interest, this.times);
-  // }
+  getNominalInterestDecimal() {
+    const interest = this.simpleInterestDecimal(
+      this.principal,
+      this.interestRate
+    );
+    return this.getCompoundInterest(this.principal, interest, this.times);
+  }
+  getNominalInterestPercent() {
+    const interest = this.simpleInterestPercent(
+      this.principal,
+      this.interestRate
+    );
+    return this.getCompoundInterest(this.principal, interest, this.times);
+  }
   getRealInterestDecimal() {
     const interest = this.simpleInterestDecimal(
       this.principal,
@@ -105,7 +105,7 @@ export default class InterestCalculator {
       this.principal,
       this.realInterestRate(this.interestRate, this.inflationRate)
     );
-    
+
     return this.getCompoundInterest(
       this.principal,
       interest,
